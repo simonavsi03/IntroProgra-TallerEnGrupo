@@ -1,0 +1,72 @@
+package PracticaComando;
+
+import javax.swing.JOptionPane;
+
+public class CalculadoraVelocidadTiempoyDistancia {
+
+	public static void main(String[] args) {
+	
+		//Calculadora de velocidad, tiempo y distancia (con menu pedir las variables que se necesiten)
+	
+		double D,T,V;		
+				int opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido a la calculadora de Velocidad, tiempo y distancia ¿Que desea calcular?:\n"
+						+ "1. Velocidad\n"
+						+ "2. Tiempo\n"
+						+ "3. Distancia\n"));
+
+			
+				
+				
+				switch (opcion) {
+				case 1:
+					D = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la distancia"));
+					T = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el tiempo"));
+					Velocidad(D,T);
+					break;
+				case 2:
+					D= Double.parseDouble(JOptionPane.showInputDialog("Ingrese la distancia"));
+					V = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la velocidad"));
+					Tiempo(D,V);
+					break;
+				case 3:
+					T = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el tiempo"));
+					V = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la velocidad"));
+					Distancia(T,V);
+					break;
+			
+				}
+
+			}
+			
+			public static void Velocidad(double D, double T){
+
+				double Velocidad =0;
+
+				Velocidad= D/T;
+
+				JOptionPane.showMessageDialog(null, "La velocidad es igual a "+Velocidad);
+
+			}
+
+			public static void Tiempo(double D,double V) {
+
+				double Tiempo = 0;
+
+				Tiempo =D/V ;
+
+				JOptionPane.showMessageDialog(null, "El Tiempo es igual a: "+Tiempo);
+
+			}
+			
+			public static void Distancia(double T, double V){
+
+				double Distancia=0;
+
+				Distancia = (T*V);
+
+				JOptionPane.showMessageDialog(null, "La distancia es igual a "+Distancia);
+		    }
+			
+		
+			
+					}
