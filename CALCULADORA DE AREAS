@@ -1,0 +1,86 @@
+package PracticaComando;
+
+import javax.swing.JOptionPane;
+
+public class Calculadoradeareas {
+
+	public static void main(String[] args) {
+
+		//Calculadora de áreas (triangulo, circulo, cuadrado, rectángulo)
+		
+int a,b;
+double c;		
+		int opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido a la calculadora de areas\n ¿Que tipo de area desea calcular?:\n"
+				+ "1. Triangulo\n"
+				+ "2. Circulo\n"
+				+ "3. Cuadrado\n"
+				+ "4. Rectangulo\n"));
+
+	
+		
+		
+		switch (opcion) {
+		case 1:
+			a = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ancho del tringulo"));
+			b = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura del triangulo"));
+			triangulo(a,b);
+			break;
+		case 2:
+			c = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio del circulo"));
+			circulo(c);
+			break;
+		case 3:
+			a = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ancho del cuadrado"));
+			b = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura del cuadrado"));
+			Cuadrado(a,b);
+			break;
+		case 4:
+			a = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ancho del rectangulo"));
+			b = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura del rectangulo"));
+			Rectangulo(a,b);
+			break;
+		}
+
+	}
+	
+	public static void triangulo(int a, int b){
+
+		int triangulo=0;
+
+		triangulo = (a * b)/2;
+
+		JOptionPane.showMessageDialog(null, "El area del triangulo es igual a "+triangulo);
+
+	}
+
+	public static void circulo(double c) {
+
+		double circulo =0;
+
+		circulo = 3.1416*(c*c);
+
+		JOptionPane.showMessageDialog(null, "El area del circulo es igual a: "+circulo);
+
+	}
+	
+	public static void Cuadrado(int a, int b){
+
+		int Cuadrado=0;
+
+		Cuadrado = (a * b);
+
+		JOptionPane.showMessageDialog(null, "El area del triangulo es igual a "+Cuadrado);
+    }
+	
+	public static void Rectangulo (int a, int b){
+
+		int rectangulo =0;
+
+	    rectangulo = (a * b);
+
+		JOptionPane.showMessageDialog(null, "El area del triangulo es igual a "+rectangulo);
+
+
+	
+			}}
+      
